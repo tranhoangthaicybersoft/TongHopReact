@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Home from './Page/Home/Home';
+import Register from './Page/Register/Register';
+import Login from './Page/Login/Login';
+import Contact from './Page/Contact/Contact';
+import Header from './Component/Header/Header';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header/>
+        {/**Sử dụng switch để điều hướng các page */}
+        <Switch>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/contact" component={Contact} />
+        </Switch>
+        {/**Route mặc định */}
+        <Route exact path="/" component={Home}/>
+      </div>
+    </BrowserRouter>
   );
 }
 
