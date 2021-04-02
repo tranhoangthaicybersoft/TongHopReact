@@ -12,7 +12,7 @@ export default class Header extends Component {
                             <li className="nav-item">
                                 <NavLink activeStyle={{ fontWeight: 'bold' }} activeClassName="bg-light text-dark" className="nav-link" to="/home">Home</NavLink>
                             </li>
-                            <li className="nav-item"> 
+                            <li className="nav-item">
                                 <NavLink activeStyle={{ fontWeight: 'bold' }} activeClassName="bg-light text-dark" className="nav-link" to="/contact">Contact</NavLink>
                             </li>
                             <li className="nav-item">
@@ -21,13 +21,20 @@ export default class Header extends Component {
                             <li className="nav-item">
                                 <NavLink activeStyle={{ fontWeight: 'bold' }} activeClassName="bg-light text-dark" className="nav-link" to="/register">Register</NavLink>
                             </li>
-                            {/* <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <li className="nav-item">
+                                <NavLink activeStyle={{ fontWeight: 'bold' }} activeClassName="bg-light text-dark" className="nav-link" to="/lifecycle">Life Cycle</NavLink>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Hooks</a>
                                 <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                    <a className="dropdown-item" href="#">Action 1</a>
-                                    <a className="dropdown-item" href="#">Action 2</a>
+                                    <NavLink className="dropdown-item" to="/usestatehook">Use State Hook</NavLink>
+                                    <NavLink className="dropdown-item" to="/baitapchonxe">Bài tập chọn xe</NavLink>
+                                    <NavLink className="dropdown-item" to="/usecallback">Bài tập Use Callback</NavLink>
+                                    <NavLink className="dropdown-item" to="/usememo">Use Memo Hook </NavLink>
+                                    <NavLink className="dropdown-item" to="/useeffect">Use Effect Hook </NavLink>
+                                    <NavLink className="dropdown-item" to="/reduxhook">Redux Hook </NavLink>
                                 </div>
-                            </li> */}
+                            </li>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="text" placeholder="Search" />
@@ -35,8 +42,8 @@ export default class Header extends Component {
                         </form>
                     </div>
                 </nav>
-
             </div>
         )
     }
 }
+
